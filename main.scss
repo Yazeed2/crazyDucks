@@ -1,0 +1,43 @@
+@import './var';
+body{
+    background-color: black;
+    color: $offWhite;
+    text-align: center;
+    font-family: Helvetica;
+}
+h1{
+    font-size: $large;
+    
+    
+}
+.health{
+    width: 25%;
+    position: fixed;
+    right: 10px;
+    text-align: left;
+    & h2{
+        margin: 0;
+        font-size: $large;    
+        font-weight: 300;
+    }
+    & p{
+        margin: 0;
+        color: $green;
+        font-size:  $medium;
+    }
+}
+.hearts{
+    
+    position: fixed;
+    left:30px;
+    width: 35%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    & img{ 
+        width  :80%;
+        
+    }
+}
+
+@import './ducks';
+@import './animations';
