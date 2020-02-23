@@ -46,7 +46,7 @@ function spawn(){
        
     }
     let duck = $('<div onload="sub()" class = "duck animation'+i+'"></div> ')
-    duck.click((thisduck)=>{
+    duck.on('click',(thisduck)=>{
         count(+enm)
         duck.hide()
     console.log(score);
