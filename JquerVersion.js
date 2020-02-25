@@ -2,14 +2,10 @@ var score = 100
 var enm = 20
 
 function start(){
-var $game = document.getElementById('game')
-
 var here = 0
 var scoring = setInterval(()=>{
     here += 3
-    // $('#score').replaceWith(' <h1 id="score">'+here+'</h1>')
-    $score = document.querySelector('#score')
-    $score.innerText = here
+    $('#score').replaceWith(' <h1 id="score">'+here+'</h1>')
 
 }, 130)
 
@@ -49,18 +45,15 @@ function spawn(){
 
        
     }
-
-    // let duck = $('<div onload="sub()" class = "duck animation'+i+'"></div> ')
-    let duck = document.createElement('div')
-    duck.setAttribute('class', 'duck animation'+i)
-    duck.addEventListener('click', ()=>{
+    let duck = $('<div onload="sub()" class = "duck animation'+i+'"></div> ')
+    duck.on('click',(thisduck)=>{
         count(+enm)
-        duck.remove()
-    })
-    console.log(duck);
-    
-    $game.appendChild(duck)
+        duck.hide()
+    console.log(score);
 
+    })
+    
+     duck.prependTo($('#game')); 
 }
 }
 function count(i){
