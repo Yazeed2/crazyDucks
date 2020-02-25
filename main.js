@@ -53,7 +53,7 @@ function spawn(){
     // let duck = $('<div onload="sub()" class = "duck animation'+i+'"></div> ')
     let duck = document.createElement('div')
     duck.setAttribute('class', 'duck animation'+i)
-    duck.addEventListener('click', ()=>{
+    duck.addEventListener('onmousedown', ()=>{
         count(+enm)
         duck.remove()
     })
