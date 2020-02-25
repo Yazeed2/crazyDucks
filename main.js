@@ -42,7 +42,7 @@ var interval = 1000
 
 
 function spawn(){
-    count(-enm)
+    // count(-enm)
     let i = Math.floor(Math.random() * 729)+ 1;
     if (score < 0 ){
         clearInterval(timing);
@@ -52,9 +52,11 @@ function spawn(){
 
     // let duck = $('<div onload="sub()" class = "duck animation'+i+'"></div> ')
     let duck = document.createElement('div')
-    duck.setAttribute('class', 'duck animation'+i)
-    duck.addEventListener('onmousedown', ()=>{
+    duck.setAttribute('class', 'duck')
+    duck.addEventListener('mousedown', ()=>{
         count(+enm)
+        console.log('hey bro');
+        
         duck.remove()
     })
     console.log(duck);
