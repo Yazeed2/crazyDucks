@@ -1,5 +1,5 @@
 var score = 100
-var enm = 20
+var enm = 12
 
 function start(){
 var $game = document.getElementById('game')
@@ -42,7 +42,7 @@ var interval = 1000
 
 
 function spawn(){
-    // count(-enm)
+    count(-enm)
     let i = Math.floor(Math.random() * 729)+ 1;
     if (score < 0 ){
         clearInterval(timing);
@@ -52,7 +52,7 @@ function spawn(){
 
     // let duck = $('<div onload="sub()" class = "duck animation'+i+'"></div> ')
     let duck = document.createElement('div')
-    duck.setAttribute('class', 'duck')
+    duck.setAttribute('class', 'duck animation'+i)
     duck.addEventListener('mousedown', ()=>{
         count(+enm)
         console.log('hey bro');
